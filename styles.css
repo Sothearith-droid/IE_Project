@@ -81,37 +81,87 @@ h2 {
     transform: scale(1.1);
 }
 
+/* Parent Container */
 .interactive-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.factors {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
+    padding: 50px 20px;
+    text-align: center;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
+/* Grid Container */
+.factors {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Make the center column wider */
+    grid-template-rows: 1fr 2fr 1fr; /* Make the center row taller */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: auto; /* Ensure the grid container takes full width */
+    height: auto; /* Adjust height according to content */
+}
+
+/* Grid Items */
 .factor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color: #f8f8f8;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     transition: transform 0.3s;
     border: 3px solid #4a4a4a;
     text-align: center;
     padding: 10px;
+    box-sizing: border-box;
+    justify-self: center; /* Center horizontally in the grid cell */
+}
+
+.factor:nth-child(1),
+.factor:nth-child(3),
+.factor:nth-child(7),
+.factor:nth-child(9) {
+    transform: translate(60px, 60px); /* Move corner circles closer to the center */
+}
+
+.factor:nth-child(3),
+.factor:nth-child(9) {
+    transform: translate(-60px, 60px); /* Move top-right and bottom-right circles closer to the center */
+}
+
+.factor:nth-child(7) {
+    transform: translate(60px, -60px); /* Move bottom-left circle closer to the center */
+}
+
+.factor:nth-child(9) {
+    transform: translate(-60px, -60px); /* Move bottom-right circle closer to the center */
 }
 
 .factor:hover {
     transform: scale(1.1);
+}
+
+/* Target the center button */
+.factor:nth-child(5) {
+    width: 280px; /* Double the width */
+    height: 280px; /* Double the height */
+    grid-column: 2 / 3; /* Center column */
+    grid-row: 2 / 3; /* Center row */
+    align-self: center; /* Center vertically in the grid cell */
+    justify-self: center; /* Center horizontally in the grid cell */
+}
+
+@media (max-width: 600px) {
+    .factors {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: auto;
+    }
 }
 
 #description-box {
