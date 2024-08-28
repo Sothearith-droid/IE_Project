@@ -89,7 +89,7 @@ h2 {
     padding: 50px 20px;
     text-align: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 50vh;
     box-sizing: border-box;
 }
 
@@ -123,24 +123,27 @@ h2 {
     justify-self: center; /* Center horizontally in the grid cell */
 }
 
-.factor:nth-child(1),
-.factor:nth-child(3),
-.factor:nth-child(7),
-.factor:nth-child(9) {
-    transform: translate(60px, 60px); /* Move corner circles closer to the center */
+.static-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px; /* Same as the button size */
+    height: 280px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    border: 3px solid #4a4a4a;
+    text-align: center;
+    font-size: 1.5em; /* Adjust the font size as needed */
+    color: black;
+    box-sizing: border-box;
+    grid-column: 2 / 3; /* Center column */
+    grid-row: 2 / 3; /* Center row */
+    align-self: center; /* Center vertically in the grid cell */
+    justify-self: center; /* Center horizontally in the grid cell */
 }
 
-.factor:nth-child(3),
-.factor:nth-child(9) {
-    transform: translate(-60px, 60px); /* Move top-right and bottom-right circles closer to the center */
-}
-
-.factor:nth-child(7) {
-    transform: translate(60px, -60px); /* Move bottom-left circle closer to the center */
-}
-
-.factor:nth-child(9) {
-    transform: translate(-60px, -60px); /* Move bottom-right circle closer to the center */
+.static-label:hover {
+    transform: none;
 }
 
 .factor:hover {
@@ -148,11 +151,51 @@ h2 {
 }
 
 /* Target the center button */
-.factor:nth-child(5) {
+.factor:nth-child(3) {
     width: 280px; /* Double the width */
     height: 280px; /* Double the height */
     grid-column: 2 / 3; /* Center column */
     grid-row: 2 / 3; /* Center row */
+    align-self: center; /* Center vertically in the grid cell */
+    justify-self: center; /* Center horizontally in the grid cell */
+}
+
+/* Target the center button */
+.factor:nth-child(1) {
+    width: 150px; /* Double the width */
+    height: 150px; /* Double the height */
+    grid-column: 3; /* Center column */
+    grid-row: 2; /* Center row */
+    align-self: center; /* Center vertically in the grid cell */
+    justify-self: center; /* Center horizontally in the grid cell */
+}
+
+/* Target the center button */
+.factor:nth-child(2) {
+    width: 150px; /* Double the width */
+    height: 150px; /* Double the height */
+    grid-column: 1; /* Center column */
+    grid-row: 2; /* Center row */
+    align-self: center; /* Center vertically in the grid cell */
+    justify-self: center; /* Center horizontally in the grid cell */
+}
+
+/* Target the center button */
+.factor:nth-child(5) {
+    width: 150px; /* Double the width */
+    height: 150px; /* Double the height */
+    grid-column: 2; /* Center column */
+    grid-row: 1; /* Center row */
+    align-self: center; /* Center vertically in the grid cell */
+    justify-self: center; /* Center horizontally in the grid cell */
+}
+
+/* Target the center button */
+.factor:nth-child(4) {
+    width: 150px; /* Double the width */
+    height: 150px; /* Double the height */
+    grid-column: 2; /* Center column */
+    grid-row: 3; /* Center row */
     align-self: center; /* Center vertically in the grid cell */
     justify-self: center; /* Center horizontally in the grid cell */
 }
@@ -172,14 +215,14 @@ h2 {
 }
 
 .chart-section {
-    padding: 50px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
 canvas {
     max-width: 400px;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-bottom: auto;
 }
 
 .action-section {
