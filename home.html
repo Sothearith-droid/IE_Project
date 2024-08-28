@@ -18,6 +18,13 @@
             width: 70% !important;
             height: auto !important;
         }
+        #congrats-message {
+            display: none;
+            text-align: center;
+            font-size: 2em;
+            color: grey;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
@@ -36,7 +43,7 @@
         <h2>Hey, have you been feeling socially isolated or lonely lately?</h2>
         <div class="buttons">
             <button onclick="scrollToFactors()">Maybe</button>
-            <button>No</button>
+            <button onclick="showCongratsMessage()">No</button> 
         </div>
     </div>
 
@@ -80,6 +87,10 @@
             <button>Learn Hobby</button>
             <button>Exercise</button>
         </div>
+    </div>
+
+    <div id="congrats-message">
+        Congratulations. You have a happy life.
     </div>
 
     <!-- Include external scripts -->
@@ -155,7 +166,7 @@
                                 position: 'right',
                                 labels: {
                                     font: {
-                                        size: 14,
+                                        size: 10,
                                     },
                                     boxWidth: 20,
                                     padding: 15,
@@ -170,7 +181,7 @@
                                 color: '#fff',
                                 font: {
                                     weight: 'bold',
-                                    size: 14,
+                                    size: 10,
                                 }
                             }
                         }
@@ -223,7 +234,7 @@
                                 position: 'right',
                                 labels: {
                                     font: {
-                                        size: 14,
+                                        size: 10,
                                     },
                                     boxWidth: 20,
                                     padding: 15,
@@ -238,7 +249,7 @@
                                 color: '#fff',
                                 font: {
                                     weight: 'bold',
-                                    size: 14,
+                                    size: 10,
                                 }
                             }
                         }
@@ -265,6 +276,16 @@
                 }
             }
         });
+
+        function showCongratsMessage() {
+            const congratsMessage = document.getElementById('congrats-message');
+            congratsMessage.style.display = 'block';
+            congratsMessage.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToFactors() {
+            document.getElementById('factors-section').scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
