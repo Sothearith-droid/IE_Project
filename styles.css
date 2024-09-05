@@ -42,6 +42,16 @@ nav a {
     border-radius: 5px;
 }
 
+.row {
+    white-space: nowrap;
+}
+
+.row>div {
+    width: 100px;
+    height: 50px;
+    display: inline-flex;
+}
+
 .content {
     display: flex;
     flex-direction: column;
