@@ -24,68 +24,31 @@
     <div class="background-image"></div>
 
     <header>
+        <h1>Isolation Aware Programm</h1>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Page 1</a>
-            <a href="#">Page 2</a>
-            <a href="#">Page 3</a>
+            <a href="home.html">Home</a>
+            <a href="Page1.html">Information</a>
+        <!--<a href="#">Page 2</a>
+            <a href="#">Page 3</a>-->
         </nav>
     </header>
 
     <div class="content">
         <h2>Hey, have you been feeling socially isolated or lonely lately?</h2>
         <div class="buttons">
-            <button onclick="scrollToFactors()">Maybe</button>
-            <button onclick="window.location.href='volunteer.html'">No</button> <!-- Updated to link to the new page -->
-        </div>
-    </div>
-
-    <div id="factors-section" class="interactive-section">
-        <h2>What factors give rise to social isolation?</h2>
-        <div class="factors">
-<!--            <div class="factor" onclick="updateDescription('Limited access to reliable transport')">Limited access to reliable transport</div>-->
-            <div class="factor" onclick="updateDescription('Retirement')">Retirement</div>
-<!--            <div class="factor" onclick="updateDescription('Financial stress')">Financial stress</div>-->
-            <div class="factor" onclick="updateDescription('Significant life events')">Significant life events</div>
-            <div class="static-label">Cause of Isolation</div>
-            <div class="factor" onclick="updateDescription('Due to Disability')">Due to Disability</div>
-            <div class="factor" onclick="updateDescription('Low self-esteem')">Low self-esteem</div>
-<!--            <div class="factor" onclick="updateDescription('Physical illness')">Physical illness</div>-->
-<!--            <div class="factor" onclick="updateDescription('Caring responsibilities')">Caring responsibilities</div>-->
-        </div>
-        <div id="description-box"></div>
-    </div>
-
-    <!-- Pie chart to show the total number of people with each disease -->
-    <div id="total-chart-section" class="chart-section">
-        <div class="chart-container">
-            <h2>Total Disease Distribution</h2>
-            <canvas id="totalPieChart"></canvas>
-        </div>
-    </div>
-
-    <!-- Pie charts to show the distribution of each disease across different age ranges -->
-    <div id="ageRangeSection" class="chart-section" style="display: none;">
-        <div class="chart-container">
-            <h2 id="ageRangeTitle"></h2>
-            <canvas id="diseasePieChart"></canvas>
+            <button onclick="scrollToButtons()">Maybe</button>
+            <a href="volunteer.html"><button type="button">No</button></a>
         </div>
     </div>
 
     <div id="action-section" class="action-section">
         <h2>Take Actions</h2>
         <div class="action-buttons">
-            <button>Take a Test</button>
-            <button>Fitness Program</button>
-            <button>Learn Hobby</button>
-            <button>Exercise</button>
+            <!-- <button>Take a Test</button>  [Next ieration]-->
+            <a href="Page1.html"><button type="button">Information</button></a>
+            <button>Hobbies</button><!--[2nd ieration]-->
+            <button>Exercises</button><!--[2nd ieration]-->
         </div>
     </div>
-
-    <!-- Include external scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
-    <script src="scripts.js"></script> <!-- Link to the external JS file -->
 </body>
 </html>

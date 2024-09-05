@@ -183,8 +183,8 @@ function showCongratsMessage() {
     congratsMessage.scrollIntoView({ behavior: 'smooth' });
 }
 
-function scrollToFactors() {
-    document.getElementById('factors-section').scrollIntoView({ behavior: 'smooth' });
+function scrollToButtons() {
+    document.getElementById('action-section').scrollIntoView({ behavior: 'smooth' });
 }
 
 function updateDescription(factor) {
