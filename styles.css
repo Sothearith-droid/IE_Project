@@ -27,10 +27,12 @@ header {
 }
 
 nav {
-    text-align: right;
+    text-align: center;
     padding: 10px 20px;
     background-color: #333;
     color: white;
+    margin-left: 2250px;
+    margin-top: 20px;
 }
 
 nav a {
