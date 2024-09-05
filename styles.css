@@ -22,12 +22,12 @@ body, html {
 header {
     background-color: #333;
     padding: 10px 20px;
-    text-align: left;
+    text-align: flex;
     color: white;
 }
 
 nav {
-    text-align: left;
+    text-align: right;
     padding: 10px 20px;
     background-color: #333;
     color: white;
@@ -49,6 +49,12 @@ nav a {
     justify-content: center;
     height: 100%;
     text-align: center;
+}
+
+h1 {
+    color: #f8f8f8;
+    font-size: 2em;
+    text-align: left;
 }
 
 h2 {
