@@ -31,8 +31,8 @@ nav {
     padding: 10px 20px;
     background-color: #333;
     color: white;
-    margin-left: 2250px;
     margin-top: 20px;
+    justify-content: flex-end;
 }
 
 nav a {
